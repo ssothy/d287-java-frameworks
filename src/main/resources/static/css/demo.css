@@ -2,6 +2,24 @@ body {
     background-color: lavenderblush;
 }
 
+h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: hotpink;
+    transition: 0.7s;
+}
+
 .btn {
     background-color : white;
     color: hotpink;
@@ -12,4 +30,12 @@ body {
     background-color: hotpink;
     transition: 0.7s;
     color: white;
+}
+
+.about-h2 {
+    text-align: center;
+}
+
+.about-p {
+    text-align: center;
 }
