@@ -3,7 +3,8 @@
 # WESTERN GOVERNOR UNIVERSITY 
 ## D287 – JAVA FRAMEWORKS
 
-C.
+C. I changed the name and title to Sami's Stuffies (Not for sure if I like the name or not yet), 
+added parts and product names. Added some styling to make the aesthetics of the page match my theme.
 
 D.
 
