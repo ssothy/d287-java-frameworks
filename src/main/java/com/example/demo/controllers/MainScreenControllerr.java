@@ -57,12 +57,5 @@ public class MainScreenControllerr {
         return "mainscreen";
     }
 
-    public class about {
-        @RequestMapping("about")
-        public String getAbout() {
-            return "about";
-        }
-    }
-
 }
 
