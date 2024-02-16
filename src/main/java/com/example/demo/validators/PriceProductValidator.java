@@ -37,7 +37,7 @@ public class PriceProductValidator implements ConstraintValidator<ValidProductPr
         ProductService repo = myContext.getBean(ProductServiceImpl.class);
         double sumPartsPrice = 0;
         if (product.getId() != 0) {
-            Product myProduct = repo.findById((int) product.getId());
+            Product myProduct = repo.findById((long) product.getId());
             for (Part p : myProduct.getParts()) sumPartsPrice = sumPartsPrice + p.getPrice();
             if (product.getPrice() >= sumPartsPrice) {
                 return true;

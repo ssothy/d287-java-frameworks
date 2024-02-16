@@ -20,16 +20,29 @@ a:hover {
     transition: 0.7s;
 }
 
+.aboutbtn {
+    text-align: center;
+}
+
 .btn {
     background-color : white;
     color: hotpink;
     border:white;
+    float: left;
+    margin-right: 15px;
 }
 
 .btn:hover {
     background-color: hotpink;
     transition: 0.7s;
     color: white;
+}
+
+form {
+    float: left;
+}
+.message {
+    text-align: center;
 }
 
 .about-h2 {

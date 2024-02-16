@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 
-public class about {
+public class AboutController {
     @RequestMapping("about")
     public String getAbout() {
         return "about";
     }
-
 }
 
 

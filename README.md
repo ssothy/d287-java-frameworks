@@ -16,7 +16,13 @@ different stuffed animals.I had complications with it duplicating but after empt
 stays at it's correct amount. I also used a simple conditional checking that the repositories are at 0 in order to
 input the entries without duplicates. 
 
-F.
+F. I added Buy Now buttons to the table on mainscreen by adding a form to hold the button on line 88. I created success 
+and error html pages to display the corresponding messages. To get those messages to display accordingly I had to create 
+the buyProduct function in ProductServiceImpl.java on line 69 that was implemented in productService.java on line 19
+The buyProduct function checked the inventory of the product ID gathered from the form and sends whether it's an error 
+or successful purchase to the controller I made in ProductController.java that sends the message to be displayed in the 
+html pages. I then had to create controllers for the success and error pages which were simple like the about controller
+in the previous step. 
 
 G.
 
