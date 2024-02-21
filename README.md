@@ -24,9 +24,15 @@ or successful purchase to the controller I made in ProductController.java that s
 html pages. I then had to create controllers for the success and error pages which were simple like the about controller
 in the previous step. 
 
-G.
+G. I added the form inputs for minimum inventory and maximum inventory for OutsourcedPartForm.html and InhousePartForm.html
+on lines 27 and 30. I then initialized min and max variables in Part.java on lines 34 and 36 and set them to 0 and 100. 
+I then created setter and getter methods min and max on lines 94 - 100. Then in BootStrapData.java I added sample min
+and max inventory values to the current sample data I have. I then satisfied the requirement of renaming my persistent
+storage from spring-boot-h2-db.mv.db to parts_with_inventory.db.mv.db. I then added validators to my min and max variables
+in Part.java with @Min and @Max annotations on lines 33 and 35 to make sure the minimum inventory input isn't less than 0
+and that the maximum inventory isn't more than 1000. 
 
-H.
+H. 
 
 I.
 

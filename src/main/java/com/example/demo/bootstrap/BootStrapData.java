@@ -2,22 +2,14 @@ package com.example.demo.bootstrap;
 
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
-import com.example.demo.domain.Part;
 import com.example.demo.domain.Product;
-import com.example.demo.repositories.InhousePartRepository;
 import com.example.demo.repositories.OutsourcedPartRepository;
 import com.example.demo.repositories.PartRepository;
 import com.example.demo.repositories.ProductRepository;
-import com.example.demo.service.OutsourcedPartService;
-import com.example.demo.service.OutsourcedPartServiceImpl;
-import com.example.demo.service.ProductService;
-import com.example.demo.service.ProductServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
-import java.util.Optional;
 
 /**
  *
@@ -65,30 +57,41 @@ public class BootStrapData implements CommandLineRunner {
             pinkBow.setInv(15);
             pinkBow.setPrice(5.00);
             pinkBow.setId(1000);
+            pinkBow.setMin(5);
+            pinkBow.setMax(25);
+
 
             InhousePart whiteBow = new InhousePart();
             whiteBow.setName("White Bow");
             whiteBow.setInv(15);
             whiteBow.setPrice(5.00);
             whiteBow.setId(1001);
+            whiteBow.setMin(5);
+            whiteBow.setMax(25);
 
             InhousePart alohaDress = new InhousePart();
             alohaDress. setName("Aloha Dress");
             alohaDress.setInv(5);
             alohaDress.setPrice(10.00);
             alohaDress.setId(1002);
+            alohaDress.setMin(5);
+            alohaDress.setMax(25);
 
             InhousePart glitterDress = new InhousePart();
             glitterDress.setName("Glitter Dress");
             glitterDress.setInv(5);
             glitterDress.setPrice(11.00);
             glitterDress.setId(1003);
+            glitterDress.setMin(5);
+            glitterDress.setMax(25);
 
             InhousePart picnicDress = new InhousePart();
             picnicDress.setName("Picnic Dress");
             picnicDress.setInv(5);
             picnicDress.setPrice(10.00);
             picnicDress.setId(1004);
+            picnicDress.setMin(5);
+            picnicDress.setMax(25);
 
             partRepository.save(pinkBow);
             partRepository.save(whiteBow);
