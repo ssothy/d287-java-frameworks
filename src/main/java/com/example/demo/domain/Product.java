@@ -4,6 +4,7 @@ import com.example.demo.validators.ValidEnufParts;
 import com.example.demo.validators.ValidProductPrice;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.HashSet;

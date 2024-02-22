@@ -32,7 +32,8 @@ storage from spring-boot-h2-db.mv.db to parts_with_inventory.db.mv.db. I then ad
 in Part.java with @Min and @Max annotations on lines 33 and 35 to make sure the minimum inventory input isn't less than 0
 and that the maximum inventory isn't more than 1000. 
 
-H. 
+H. Some of these changes are going to show up in the previous push because I accidentally got ahead of myself trying to match up
+with the full project demonstration video. 
 
 I.
 

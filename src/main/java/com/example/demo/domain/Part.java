@@ -3,6 +3,7 @@ package com.example.demo.domain;
 import com.example.demo.validators.ValidDeletePart;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.io.Serializable;
@@ -86,7 +87,7 @@ public class Part implements Serializable {
     public int getInv() {
         return inv;
     }
-
+    @Transactional
     public void setInv(int inv) {
         this.inv = inv;
     }

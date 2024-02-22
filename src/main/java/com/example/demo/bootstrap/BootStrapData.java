@@ -71,7 +71,7 @@ public class BootStrapData implements CommandLineRunner {
 
             InhousePart alohaDress = new InhousePart();
             alohaDress. setName("Aloha Dress");
-            alohaDress.setInv(5);
+            alohaDress.setInv(15);
             alohaDress.setPrice(10.00);
             alohaDress.setId(1002);
             alohaDress.setMin(5);
@@ -79,7 +79,7 @@ public class BootStrapData implements CommandLineRunner {
 
             InhousePart glitterDress = new InhousePart();
             glitterDress.setName("Glitter Dress");
-            glitterDress.setInv(5);
+            glitterDress.setInv(15);
             glitterDress.setPrice(11.00);
             glitterDress.setId(1003);
             glitterDress.setMin(5);
@@ -87,7 +87,7 @@ public class BootStrapData implements CommandLineRunner {
 
             InhousePart picnicDress = new InhousePart();
             picnicDress.setName("Picnic Dress");
-            picnicDress.setInv(5);
+            picnicDress.setInv(15);
             picnicDress.setPrice(10.00);
             picnicDress.setId(1004);
             picnicDress.setMin(5);
