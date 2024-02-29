@@ -6,6 +6,7 @@ import com.example.demo.service.PartService;
 import com.example.demo.service.PartServiceImpl;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.ProductServiceImpl;
+import com.example.demo.validators.ValidEnufParts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -31,6 +32,7 @@ public class AddProductController {
     private List<Part> theParts;
     private static Product product1;
     private Product product;
+    private ProductService productService;
 
     @GetMapping("/showFormAddProduct")
     public String showFormAddPart(Model theModel) {
@@ -49,7 +51,7 @@ public class AddProductController {
     }
 
     @PostMapping("/showFormAddProduct")
-    public String submitForm(@Valid @ModelAttribute("product") Product product, BindingResult bindingResult, Model theModel) {
+    public String submitForm(@Valid @ValidEnufParts @ModelAttribute("product") Product product, BindingResult bindingResult, Model theModel) {
         theModel.addAttribute("product", product);
 
         if(bindingResult.hasErrors()){
@@ -69,9 +71,9 @@ public class AddProductController {
             theModel.addAttribute("assparts",product2.getParts());
             return "productForm";
         }
- //       theModel.addAttribute("assparts", assparts);
- //       this.product=product;
-//        product.getParts().addAll(assparts);
+        //       theModel.addAttribute("assparts", assparts);
+        //       this.product=product;
+        //        product.getParts().addAll(assparts);
         else {
             ProductService repo = context.getBean(ProductServiceImpl.class);
             if(product.getId()!=0) {
@@ -133,7 +135,7 @@ public class AddProductController {
 // make the add and remove buttons work
 
     @GetMapping("/associatepart")
-    public String associatePart(@Valid @RequestParam("partID") int theID, Model theModel){
+    public String associatePart(@Valid @ValidEnufParts @RequestParam("partID") int theID, Model theModel){
     //    theModel.addAttribute("product", product);
     //    Product product1=new Product();
         if (product1.getName()==null) {
@@ -173,4 +175,5 @@ public class AddProductController {
         theModel.addAttribute("availparts",availParts);
         return "productForm";
     }
+
 }

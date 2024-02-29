@@ -33,7 +33,12 @@ in Part.java with @Min and @Max annotations on lines 33 and 35 to make sure the 
 and that the maximum inventory isn't more than 1000. 
 
 H. Some of these changes are going to show up in the previous push because I accidentally got ahead of myself trying to match up
-with the full project demonstration video. 
+with the full project demonstration video. I'm not sure if I cheated, but I used the built-in @Min and @Max annotations on
+lines 33 and 35 to add error messages. For the second requirement I modified EnufPartsValidator to check that the partinventory
+did not go below the min on lines 41-53. I then used the ValidEnufParts annotation on the submitForm and associateParts methods
+on lines 54 and 138. With these additions I was able to get it to display an error message if the partsInventory was
+decreased past it's minimum when more products were added. I also added in an extra if statement on lines 38 and 39 to make 
+sure the user didn't input product inventory less than the current inventory because I felt like it made more sense logically. 
 
 I.
 
