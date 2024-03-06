@@ -43,5 +43,5 @@ sure the user didn't input product inventory less than the current inventory bec
 I. In PartTest.java I added two new tests called testMin and testMax to lines 160-175. I followed the structure of the
 tests on the page in order to test the min and maxes for inhouse and outsourced parts. I ran the tests and they all passed.
 
-J.
+J. It looks like all of my validators are being utilized, so I didn't have to delete any classes. 
 
