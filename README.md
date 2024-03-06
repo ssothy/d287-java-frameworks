@@ -40,7 +40,8 @@ on lines 54 and 138. With these additions I was able to get it to display an err
 decreased past it's minimum when more products were added. I also added in an extra if statement on lines 38 and 39 to make 
 sure the user didn't input product inventory less than the current inventory because I felt like it made more sense logically. 
 
-I.
+I. In PartTest.java I added two new tests called testMin and testMax to lines 160-175. I followed the structure of the
+tests on the page in order to test the min and maxes for inhouse and outsourced parts. I ran the tests and they all passed.
 
 J.
 
