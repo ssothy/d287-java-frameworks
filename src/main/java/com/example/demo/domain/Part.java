@@ -34,8 +34,8 @@ public class Part implements Serializable {
     int inv;
     @Min(value = 0, message = "Minimum inventory value must be greater than 0")
     private int min = 0;
-    @Max(value = 999, message = "Maximum inventory value must be less than 999")
-    private int max = 100;
+    @Min(value = 0, message = "Minimum inventory value must be greater than 0")
+    private int max = 25;
 
     @ManyToMany
     @JoinTable(name="product_part", joinColumns = @JoinColumn(name="part_id"),
