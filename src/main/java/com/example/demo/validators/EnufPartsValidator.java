@@ -21,7 +21,8 @@ import javax.validation.ConstraintValidatorContext;
 public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, Product> {
     @Autowired
     private ApplicationContext context;
-    public static  ApplicationContext myContext;
+    public static ApplicationContext myContext;
+
     @Override
     public void initialize(ValidEnufParts constraintAnnotation) {
         ConstraintValidator.super.initialize(constraintAnnotation);
@@ -32,26 +33,18 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
         if(context==null) return true;
         if(context!=null)myContext=context;
         ProductService repo = myContext.getBean(ProductServiceImpl.class);
-        PartService partRepo = myContext.getBean(PartServiceImpl.class);
         if (product.getId() != 0) {
-            Product myProduct = repo.findById((long) product.getId()); //existing product
-            if (product.getInv() <= myProduct.getInv()) {
-                return false; //Validation fails if new inventory is less than old inventory
-            }
+            Product myProduct = repo.findById((long) product.getId());
             for (Part p : myProduct.getParts()) {
-                // Calculate the change in inventory for each associated part
-                int inventoryChange = (product.getInv() - 1) - myProduct.getInv();
-                int newPartInventory = p.getInv() - inventoryChange;
-                if (newPartInventory <= p.getMin()) {
-                    return false; // Validation fails if part's inventory would go below the minimum
-                }
-                // Update the part's inventory
-                p.setInv(newPartInventory);
-                partRepo.save(p); // Save the updated part
+                int productDiff = product.getInv() - myProduct.getInv();
+                int newInventory = p.getInv()- productDiff;
+                if (newInventory < p.getMin()) return false;
+                if (p.getInv()<(product.getInv()-myProduct.getInv()))return false;
             }
+            return true;
         }
-        return true; // Validation passes if no associated part's inventory would go below the minimum
+        else{
+            return true;
+        }
     }
 }
-
-

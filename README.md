@@ -43,7 +43,13 @@ Update: I realised I was too hasty and didn't understand the task requirement co
 some if statements to AddInhousePartController and AddOutsourcedPartController to make sure the inventory being updated 
 didn't fall below or exceed the min or max inventory limits. I then added error messages to the thymeleaf templates of 
 InhousePartForm and OutsourcedPartForm so the error messages will display accordingly. I also changed my annotations
-in Part.java because I felt like only the @Min annotation was necessary just to make sure no negative numbers are being input. 
+in Part.java because I felt like only the @Min annotation was necessary just to make sure no negative numbers are being input.
+Revision:
+I went back and restored the code of validEnufParts and realised it did most of the logic perfectly already I just added the 
+logic I made earlier to it, and it started working perfectly so that when the inventory of product made the part inventory
+decrease below the minimum it alerted the user. These changes are reflected in lines 39 - 41. I took out the modifications
+I made for the inventory to be able to decrease below the current inventory since in the end it ended up not being 
+beneficial really. 
 
 I. In PartTest.java I added two new tests called testMin and testMax to lines 160-175. I followed the structure of the
 tests on the page in order to test the min and maxes for inhouse and outsourced parts. I ran the tests and they all passed.
